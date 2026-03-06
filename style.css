@@ -9,6 +9,17 @@
   --card: #141414;
 }
 
+.light-theme {
+  --bg: #ffffff;
+  --surface: #f5f5f5;
+  --border: #e2e2e2;
+  --accent: #c8f135;
+  --accent2: #35f1c8;
+  --text: #111111;
+  --muted: #777;
+  --card: #ffffff;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -27,7 +38,7 @@ body {
   cursor: none;
 }
 
-*::selection{
+*::selection {
   background: var(--accent);
   color: #0a0a0a;
 }
@@ -189,67 +200,6 @@ nav {
 .nav-links a:hover::after {
   width: 100%;
 }
-/* 
-/* Hero 
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  position: relative;
-  padding: 120px 40px 80px;
-  overflow: hidden;
-}
-
-.hero-number {
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  color: var(--accent);
-  text-transform: uppercase;
-  font-family: "DM Mono", monospace;
-}
-
-.hero-title {
-  font-family: "Syne", sans-serif;
-  font-weight: 800;
-  font-size: clamp(3rem, 9vw, 8rem);
-  line-height: 0.92;
-  letter-spacing: -0.04em;
-  color: var(--text);
-}
-
-.hero-title .accent {
-  color: var(--accent);
-}
-
-.hero-title .italic {
-  font-family: "Instrument Serif", serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.hero-desc {
-  font-size: 0.8rem;
-  line-height: 1.8;
-  color: var(--muted);
-  max-width: 340px;
-  letter-spacing: 0.02em;
-}
-
-.hero-blob {
-  position: absolute;
-  right: -100px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(200, 241, 53, 0.06) 0%,
-    transparent 70%
-  );
-  border-radius: 50%;
-  pointer-events: none;
-} */
 
 /* ── Fade-up animations ── */
 .fade-up {
@@ -808,6 +758,7 @@ section {
   background: var(--bg);
 }
 
+
 /* Education */
 .edu-item {
   display: flex;
@@ -1108,4 +1059,47 @@ footer {
     flex-direction: column;
     gap: 16px;
   }
+}
+
+.checkbox {
+  display: none;
+}
+
+.slider {
+  width: 60px;
+  height: 30px;
+  background-color: lightgray;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border: 4px solid transparent;
+  transition: 0.3s;
+  box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.25) inset;
+  cursor: pointer;
+}
+
+.slider::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  transform: translateX(-30px);
+  border-radius: 20px;
+  transition: 0.3s;
+  box-shadow: 0 0 10px 3px rgb(0, 0, 0, 0.25);
+}
+
+.checkbox:checked ~ .slider::before {
+  transform: translateX(30px);
+  box-shadow: 0 0 10px 3px rgb(0, 0, 0, 0.25);
+}
+
+.checkbox:checked ~ .slider {
+  background-color: var(--accent);
+}
+
+.checkbox:active ~ .slider::before {
+  transform: translate(0);
 }

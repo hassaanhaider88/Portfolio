@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hassaan Haider — Full-Stack Developer</title>
+    <title>Hassaan Haider — Full-Stack Developer || HMK CodeWeb</title>
+    <link rel="shortcut icon" href="./Images/AnimMe.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Instrument+Serif:ital@0;1&display=swap"
@@ -31,10 +32,11 @@
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </div>
-      <div class="status-dot">
-        <div class="dot"></div>
-        Available for work
-      </div>
+
+      <label class="switch">
+        <input id="themeToggle" type="checkbox" class="checkbox" />
+        <div class="slider"></div>
+      </label>
     </nav>
 
     <!-- Hero Section -->
@@ -479,7 +481,7 @@
       const ProjectsGrid = document.getElementById("ProjectsGrid");
 
       // Generate project cards
-      const Projects = ProjectsData.splice(0,5).map((product) => {
+      const Projects = ProjectsData.splice(0, 5).map((product) => {
         return `<div class="project-card">
       <div class="project-num">${product.number}</div>
       <div class="project-title">${product.title}</div>
@@ -516,6 +518,7 @@
       letter-spacing: -0.03em;
       line-height: 1.2;
       margin-bottom: 20px;
+      color : white;
     "
   >
     Have a project <br /><span

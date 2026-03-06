@@ -86,7 +86,7 @@ const ProjectsData = [
       "Node.js",
       "Express.js",
       "MongoDB",
-      "Tailwind CSS",
+      "Tailwind CSS"
     ],
     links: {
       github: "https://github.com/hassaanhaider88/PersonaAEye",
@@ -99,7 +99,13 @@ const ProjectsData = [
     date: "10 Jan 2025",
     description:
       "Full-stack Pinterest-inspired platform developed with Node.js, Express, MongoDB, and EJS featuring authentication and pin management.",
-    technologies: ["Node.js", "Express.js", "MongoDB", "EJS", "Tailwind CSS"],
+    technologies: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "EJS",
+      "Tailwind CSS",
+    ],
     links: {
       github: "https://github.com/hassaanhaider88/PersonaAEye",
       live: "https://pinsyourinterest.onrender.com",
@@ -111,7 +117,10 @@ const ProjectsData = [
     date: "11 Aug 2025",
     description:
       "Open-source React component library designed for beginners to learn and contribute real-world UI components.",
-    technologies: ["React.js", "Tailwind CSS"],
+    technologies: [
+      "React.js",
+      "Tailwind CSS",
+    ],
     links: {
       github: "https://github.com/hassaanhaider88/ButtonJs",
       live: "https://buttonjs.vercel.app",
@@ -123,7 +132,13 @@ const ProjectsData = [
     date: "2 June 2025",
     description:
       "Production-ready business website built with Vanilla JavaScript and a custom Node.js backend using MongoDB.",
-    technologies: ["Node.js", "MongoDB", "Tailwind CSS", "Cloudinary"],
+    technologies: [
+      "Node.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "Cloudinary",
+
+    ],
     links: {
       github: "https://github.com/hassaanhaider88/GulzarSons",
       live: "http://gulzarsonsfurniture.com",
@@ -153,7 +168,11 @@ const ProjectsData = [
     date: "20 Dec 2023",
     description:
       "Fully responsive e-commerce application built with React, Tailwind CSS, and Context API including cart and product management.",
-    technologies: ["React.js", "Tailwind CSS", "Context API"],
+    technologies: [
+      "React.js",
+      "Tailwind CSS",
+      "Context API",
+    ],
     links: {
       github: "",
       live: "https://hmk-shop-by-hassaan-haider.netlify.app/",
@@ -165,12 +184,20 @@ const ProjectsData = [
     date: "20 Feb 2024",
     description:
       "Modern blogging platform built with Next.js and Tailwind CSS featuring authentication and scalable content management.",
-    technologies: ["Next.js", "Tailwind CSS"],
+    technologies: [
+      "Next.js",
+      "Tailwind CSS",
+    ],
     links: {
       github: "https://github.com/hassaanhaider88/HMK_Blogs",
       live: "https://hmk-codeweb.netlify.app",
     },
   },
+
+
+
+
 ];
+
 
 export default ProjectsData;
