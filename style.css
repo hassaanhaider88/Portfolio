@@ -27,6 +27,11 @@ body {
   cursor: none;
 }
 
+*::selection{
+  background: var(--accent);
+  color: #0a0a0a;
+}
+
 /* Custom cursor */
 .cursor {
   width: 12px;
