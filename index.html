@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hassaan Haider — Full-Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Grid BG -->
+    <div class="grid-bg"></div>
+
+    <!-- NAV -->
+    <nav>
+      <div class="nav-logo">HH.</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Work</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="status-dot">
+        <div class="dot"></div>
+        Available for work
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <!-- ── Left: text content ── -->
+        <div class="hero-content">
+          <p class="hero-number fade-up delay-1">
+            / 01 — Portfolio <span id="DateId"></span>
+          </p>
+
+          <h1 class="hero-title fade-up delay-2">
+            Hassaan<br />
+            <span class="italic">Haider</span><span class="accent">.</span>
+          </h1>
+
+          <p class="hero-desc fade-up delay-3">
+            Full-Stack JavaScript Developer crafting scalable REST APIs,
+            AI-integrated platforms, and production-ready web systems with
+            Node.js, React &amp; MongoDB.
+          </p>
+
+          <div class="hero-actions fade-up delay-4">
+            <a href="#projects" class="btn-primary">
+              View Work
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                style="width: 16px; height: 16px"
+              >
+                <path d="M7 17L17 7M17 7H7M17 7V17" />
+              </svg>
+            </a>
+            <a
+              href="https://wa.me/923437117831"
+              style="border-radius: 30px; corner-shape: scoop"
+              class="btn-outline"
+            >
+              Get In Touch
+            </a>
+          </div>
+        </div>
+
+        <!-- ── Right: image ── -->
+        <div class="hero-image-col fade-up delay-5">
+          <div class="hero-img-wrap">
+            <img
+              class="w-full h-full bg-cover scale-[0.95] scale-x-none md:-scale-x-100"
+              src="./Images/HHImage.png"
+              alt="Hassaan Haider"
+            />
+            <div class="img-overlay"></div>
+          </div>
+
+          <!-- "Available for work" badge sits below the image -->
+          <div class="hero-badge">
+            <span class="dot"></span>
+            Available for work
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-blob"></div>
+      <div class="hero-line">Full-Stack Developer · Node.js · React · AI</div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-wrap">
+      <div class="marquee-track">
+        <!-- Repeat twice for seamless loop -->
+        <div class="marquee-item"><span>✦</span> Node.js</div>
+        <div class="marquee-item"><span>✦</span> Express.js</div>
+        <div class="marquee-item"><span>✦</span> React.js</div>
+        <div class="marquee-item"><span>✦</span> Next.js</div>
+        <div class="marquee-item"><span>✦</span> MongoDB</div>
+        <div class="marquee-item"><span>✦</span> REST APIs</div>
+        <div class="marquee-item"><span>✦</span> JWT Auth</div>
+        <div class="marquee-item"><span>✦</span> Gemini AI</div>
+        <div class="marquee-item"><span>✦</span> PostgreSQL</div>
+        <div class="marquee-item"><span>✦</span> Tailwind CSS</div>
+        <div class="marquee-item"><span>✦</span> Cloud Storage</div>
+        <div class="marquee-item"><span>✦</span> GitHub API</div>
+        <!-- duplicate for loop -->
+        <div class="marquee-item"><span>✦</span> Node.js</div>
+        <div class="marquee-item"><span>✦</span> Express.js</div>
+        <div class="marquee-item"><span>✦</span> React.js</div>
+        <div class="marquee-item"><span>✦</span> Next.js</div>
+        <div class="marquee-item"><span>✦</span> MongoDB</div>
+        <div class="marquee-item"><span>✦</span> REST APIs</div>
+        <div class="marquee-item"><span>✦</span> JWT Auth</div>
+        <div class="marquee-item"><span>✦</span> Gemini AI</div>
+        <div class="marquee-item"><span>✦</span> PostgreSQL</div>
+        <div class="marquee-item"><span>✦</span> Tailwind CSS</div>
+        <div class="marquee-item"><span>✦</span> Cloud Storage</div>
+        <div class="marquee-item"><span>✦</span> GitHub API</div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <p class="section-label reveal">About Me</p>
+        <div class="about-grid">
+          <div class="reveal">
+            <h2 class="about-big">
+              Building <em>scalable</em> systems that power the web.
+            </h2>
+          </div>
+          <div class="reveal">
+            <p
+              style="
+                font-size: 0.78rem;
+                line-height: 2;
+                color: #888;
+                margin-bottom: 24px;
+              "
+            >
+              I'm a Full-Stack JavaScript Developer based in Punjab, Pakistan,
+              specializing in backend architecture, scalable REST APIs, and
+              AI-integrated web platforms. My stack of choice is Node.js +
+              Express + MongoDB — paired with React on the frontend.
+            </p>
+            <p
+              style="
+                font-size: 0.78rem;
+                line-height: 2;
+                color: #888;
+                margin-bottom: 32px;
+              "
+            >
+              I care deeply about performance optimization, secure
+              authentication systems, and developer-centric design. Whether it's
+              building media hosting platforms, LLM-powered automation tools, or
+              full-stack social apps — I ship production-ready code.
+            </p>
+            <div style="display: flex; gap: 40px">
+              <div>
+                <div
+                  style="
+                    font-family: &quot;Syne&quot;, sans-serif;
+                    font-size: 2rem;
+                    font-weight: 800;
+                    color: var(--accent);
+                  "
+                >
+                  15+
+                </div>
+                <div
+                  style="
+                    font-size: 0.65rem;
+                    letter-spacing: 0.1em;
+                    color: var(--muted);
+                    text-transform: uppercase;
+                  "
+                >
+                  Projects Built
+                </div>
+              </div>
+              <div>
+                <div
+                  style="
+                    font-family: &quot;Syne&quot;, sans-serif;
+                    font-size: 2rem;
+                    font-weight: 800;
+                    color: var(--accent);
+                  "
+                >
+                  2+
+                </div>
+                <div
+                  style="
+                    font-size: 0.65rem;
+                    letter-spacing: 0.1em;
+                    color: var(--muted);
+                    text-transform: uppercase;
+                  "
+                >
+                  Years Learning
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" style="background: var(--surface)">
+      <div class="container">
+        <p class="section-label reveal">/ 02 — Technical Skills</p>
+        <div class="reveal">
+          <div class="skill-row">
+            <div class="skill-label">Frontend</div>
+            <div class="skill-tags">
+              <div class="skill-tag">HTML5</div>
+              <div class="skill-tag">CSS3</div>
+              <div class="skill-tag">JavaScript ES6+</div>
+              <div class="skill-tag">React.js</div>
+              <div class="skill-tag">Next.js</div>
+              <div class="skill-tag">Tailwind CSS</div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-label">Backend</div>
+            <div class="skill-tags">
+              <div class="skill-tag">Node.js</div>
+              <div class="skill-tag">Express.js</div>
+              <div class="skill-tag">REST API Design</div>
+              <div class="skill-tag">JWT Auth</div>
+              <div class="skill-tag">Auth Systems</div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-label">Database</div>
+            <div class="skill-tags">
+              <div class="skill-tag">MongoDB</div>
+              <div class="skill-tag">PostgreSQL</div>
+              <div class="skill-tag">Redis</div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-label">AI & Integrations</div>
+            <div class="skill-tags">
+              <div class="skill-tag">Gemini API</div>
+              <div class="skill-tag">GitHub API</div>
+              <div class="skill-tag">LLM Integration</div>
+              <div class="skill-tag">Automation Pipelines</div>
+            </div>
+          </div>
+          <div class="skill-row" style="border: none">
+            <div class="skill-label">Tools & Deploy</div>
+            <div class="skill-tags">
+              <div class="skill-tag">Git & GitHub</div>
+              <div class="skill-tag">Vercel</div>
+              <div class="skill-tag">Netlify</div>
+              <div class="skill-tag">Render</div>
+              <div class="skill-tag">Cloud Storage</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <p class="section-label reveal">/ 03 — Selected Work</p>
+        <div id="ProjectsGrid" class="projects-grid reveal"></div>
+        <div class="w-full flex justify-center items-center mt-10">
+          <a href="/Projects.html">
+            <button
+              class="flex active:scale-105 justify-center group items-center gap-4 hover:scale-95 duration-300 transition-all hover:border-[#D3F45A] border py-2 px-4 text-[#D3F45A] hover:rounded-2xl"
+            >
+              View All Projects
+              <svg
+                class="group-hover:translate-x-10 transition-transform duration-300"
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+                class="copy-svg-injected"
+              >
+                <path
+                  d="M444.52 3.52L28.74 195.42c-47.97 22.39-31.98 92.75 19.19 92.75h175.91v175.91c0 51.17 70.36 67.17 92.75 19.19l191.9-415.78c15.99-38.39-25.59-79.97-63.97-63.97z"
+                ></path>
+              </svg>
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" style="background: var(--surface)">
+      <div class="container">
+        <p class="section-label reveal">/ 04 — Education</p>
+        <div class="reveal">
+          <div class="edu-item">
+            <div>
+              <div class="edu-degree">Bachelor of Science in IT</div>
+              <div class="edu-school" style="margin-top: 4px">
+                GC University Faisalabad
+              </div>
+            </div>
+            <div class="edu-year">
+              2023 — Present<br />
+              <span style="color: var(--muted); margin-top: 4px; display: block"
+                >Ongoing</span
+              >
+            </div>
+          </div>
+          <div class="edu-item" style="border: none">
+            <div>
+              <div class="edu-degree">Intermediate — Computer Science</div>
+              <div class="edu-school" style="margin-top: 4px">
+                Superior Group of Colleges
+              </div>
+            </div>
+            <div class="edu-year">
+              2023<br />
+              <span style="color: var(--muted); margin-top: 4px; display: block"
+                >Completed</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <p class="section-label reveal">/ 05 — Get In Touch</p>
+        <div class="contact-box reveal">
+          <p
+            style="
+              font-size: 0.65rem;
+              letter-spacing: 0.25em;
+              text-transform: uppercase;
+              color: var(--muted);
+              margin-bottom: 24px;
+            "
+          >
+            Open to Opportunities
+          </p>
+          <h2 class="contact-big">
+            Let's build<br />
+            <span class="contact-email">something great.</span>
+          </h2>
+          <p
+            style="
+              font-size: 0.78rem;
+              color: #888;
+              max-width: 400px;
+              margin: 24px auto 40px;
+              line-height: 2;
+              letter-spacing: 0.03em;
+            "
+          >
+            Available for full-time positions, freelance projects, and exciting
+            collaborations. Let's talk.
+          </p>
+          <a
+            href="mailto:hassaanhaider088@gmail.com"
+            onclick="
+              window.open(
+                'https://mail.google.com/mail/?view=cm&fs=1&to=hassaanhaider088@gmail.com',
+                '_blank',
+              );
+              return true;
+            "
+            class="btn-primary"
+            style="display: inline-flex; align-items: center; gap: 6px"
+          >
+            hassaanhaider088@gmail.com
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              style="width: 16px; height: 16px"
+            >
+              <path d="M7 17L17 7M17 7H7M17 7V17" />
+            </svg>
+          </a>
+          <div class="social-links">
+            <a
+              href="https://github.com/hassaanhaider088"
+              target="_blank"
+              class="social-link"
+              >GitHub</a
+            >
+            <a
+              href="https://www.linkedin.com/in/hassaan-haider"
+              target="_blank"
+              class="social-link"
+              >LinkedIn</a
+            >
+            <a
+              href="https://app.netlify.com/teams/hassaanhaider88"
+              target="_blank"
+              class="social-link"
+            >
+              Netlify
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-text">
+        © <span id="DateId"></span> Hassaan Haider. All rights reserved.
+      </div>
+      <div
+        class="footer-text flex justify-center items-center gap-2"
+        style="color: var(--accent)"
+      >
+        Built with ❤ in Punjab
+        <svg
+          class="w-8 h-8"
+          xmlns="http://www.w3.org/2000/svg"
+          id="flag-icons-pk"
+          viewBox="0 0 640 480"
+        >
+          <defs>
+            <clipPath id="pk-a">
+              <path fill-opacity=".7" d="M-52.3 0h682.6v512H-52.3z" />
+            </clipPath>
+          </defs>
+          <g
+            fill-rule="evenodd"
+            stroke-width="1pt"
+            clip-path="url(#pk-a)"
+            transform="translate(49)scale(.9375)"
+          >
+            <path fill="#C8F135" d="M-95 0h768v512H-95z" />
+            <path fill="#fff" d="M-95 0H97.5v512H-95z" />
+            <g fill="#000">
+              <path
+                d="m403.7 225.4-31.2-6.6-16.4 27.3-3.4-31.6-31-7.2 29-13-2.7-31.7 21.4 23.6 29.3-12.4-15.9 27.6 21 24z"
+              />
+              <path
+                d="M415.4 306a121 121 0 0 1-161.3 59.4 122 122 0 0 1-59.5-162.1A119 119 0 0 1 266 139a156 156 0 0 0-11.8 10.9A112.3 112.3 0 0 0 415.5 306z"
+              />
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="footer-text">Full-Stack JS Developer</div>
+    </footer>
+
+    <script type="module" src="./script.js"></script>
+    <script type="module">
+      import ProjectsData from "./ProjectsData.js";
+      const ProjectsGrid = document.getElementById("ProjectsGrid");
+
+      // Generate project cards
+      const Projects = ProjectsData.splice(0,5).map((product) => {
+        return `<div class="project-card">
+      <div class="project-num">${product.number}</div>
+      <div class="project-title">${product.title}</div>
+      <div class="project-date">${product.date}</div>
+      <p class="project-desc">${product.description}</p>
+      <div class="project-tech">
+        ${product.technologies.map((tech) => `<span class="tech-pill">${tech}</span>`).join("")}
+      </div>
+      <div class="project-links">
+        <a href="${product.links.github}" target="_blank" class="proj-link">GitHub</a>
+        <a href="${product.links.live}" target="_blank" class="proj-link">Live Demo</a>
+      </div>
+    </div>`;
+      });
+
+      // The special "Have a project?" card
+      const endCard = `
+<div
+  class="project-card"
+  style="
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(135deg, #0f1a02 0%, #0a0a0a 100%);
+    border-color: rgba(200, 241, 53, 0.15);
+  "
+>
+  <div
+    style="
+      font-family: 'Syne', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    "
+  >
+    Have a project <br /><span
+      style="
+        color: var(--accent);
+        font-family: 'Instrument Serif', serif;
+        font-style: italic;
+        font-weight: 400;
+      "
+      >in mind?</span
+    >
+  </div>
+  <p
+    style="
+      font-size: 0.72rem;
+      color: #888;
+      line-height: 1.8;
+      margin-bottom: 32px;
+      
+    "
+  >
+    Let's collaborate and build something exceptional together.
+  </p>
+  <a href="https://wa.me/923437117831" target="_blank"  class="btn-primary">Start a Conversation →</a>
+</div>
+`;
+
+      // Append all project cards and then the end card
+      ProjectsGrid.innerHTML = Projects.join("") + endCard;
+    </script>
+  </body>
+</html>
