@@ -56,7 +56,7 @@ const ProjectsData = [
     ],
     links: {
       github: "https://github.com/hassaanhaider88/SEOWala_AI",
-      live: "https://seo-wala-ai.vercel.app/",
+      live: "https://seowala-ai.onrender.com",
     },
   },
   {
