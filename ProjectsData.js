@@ -18,26 +18,6 @@ const ProjectsData = [
       live: "https://reporeademe.org",
     },
   },
-  {
-    number: "002",
-    title: "LMS System Final Project",
-    date: "March 2026",
-    description:
-      "Final Project at Hunarmand Punjab Complete LMS System with Role base authentication and autharization with three roles Admin, Instructor and Student.",
-    technologies: [
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "Tailwindcss",
-      "react-icons",
-      "Context api",
-      "MongoDB",
-    ],
-    links: {
-      github: "https://github.com/hassaanhaider088/FinalProject",
-      live: "https://lms-by-hassaan.netlify.app/",
-    },
-  },
 
   {
     number: "003",
