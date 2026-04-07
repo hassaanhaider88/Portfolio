@@ -76,8 +76,21 @@ const ProjectsData = [
     },
   },
 
+
   {
     number: "006",
+    title: "Button JS",
+    date: "11 Aug 2025",
+    description:
+      "Open-source React component library designed for beginners to learn and contribute real-world UI components.",
+    technologies: ["React.js", "Tailwind CSS", "Fastify", "MongoDB", "JWT"],
+    links: {
+      github: "https://github.com/hassaanhaider88/ButtonJs",
+      live: "https://buttonsjs.netlify.app/",
+    },
+  },
+  {
+    number: "007",
     title: "Pinterest Clone",
     date: "10 Jan 2025",
     description:
@@ -86,18 +99,6 @@ const ProjectsData = [
     links: {
       github: "https://github.com/hassaanhaider88/PersonaAEye",
       live: "https://pinsyourinterest.onrender.com",
-    },
-  },
-  {
-    number: "007",
-    title: "Button JS",
-    date: "11 Aug 2025",
-    description:
-      "Open-source React component library designed for beginners to learn and contribute real-world UI components.",
-    technologies: ["React.js", "Tailwind CSS"],
-    links: {
-      github: "https://github.com/hassaanhaider88/ButtonJs",
-      live: "https://buttonjs.vercel.app",
     },
   },
   {
