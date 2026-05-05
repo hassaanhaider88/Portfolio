@@ -152,3 +152,6 @@ const endCard = `
 
 // Append all project cards and then the end card
 document.getElementById("ProjectsGridForProjectPage").innerHTML = Projects.join("") + endCard;
+
+
+

@@ -1,6 +1,27 @@
 const ProjectsData = [
   {
     number: "001",
+    title: "Punjab Pizza Club Lalian",
+    date: "May 2026",
+    description:
+      "A production-ready business website for A food delivery service for handling orders, products, deals, customers and also be able to assign orders to different Register Riders. Also send OPT via NodeMailer to their emails for verification and order confirmation.",
+    technologies: [
+      "React.js",
+      "Redux",
+      "Tailwind CSS",
+      "Fastify",
+      "Node.js",
+      "MongoDB",
+      "Cloudinary",
+      "NodeMailer",
+    ],
+    links: {
+      github: "https://github.com/hassaanhaider88/PunjabPizzaClub",
+      live: "https://punjabpizzaclub.netlify.app",
+    },
+  },
+  {
+    number: "002",
     title: "Repo.ReadMe",
     date: "March 2026",
     description:
@@ -14,7 +35,7 @@ const ProjectsData = [
       "Tailwind CSS",
     ],
     links: {
-      github: "https://github.com/hassaanhaider088/Repo.ReadMe",
+      github: "https://github.com/hassaanhaider88/Repo.ReadMe",
       live: "https://reporeademe.org",
     },
   },

@@ -81,7 +81,7 @@
     <div class="grid-bg"></div>
 
     <!-- NAV -->
-    <nav>
+    <!-- <nav>
       <div class="nav-logo">HH.</div>
       <div class="nav-links">
         <a href="#about">About</a>
@@ -95,8 +95,113 @@
         <input id="themeToggle" type="checkbox" class="checkbox" />
         <div class="slider"></div>
       </label>
-    </nav>
+    </nav> -->
 
+    <header
+      class="fixed top-4 left-1/2 -translate-x-1/2 w-full max-w-5xl px-4 z-50"
+    >
+      <nav
+        id="nav"
+        class="relative w-full flex items-center justify-between px-4 md:px-6 py-2 rounded-2xl border border-white/20 bg-white/50 dark:bg-black/40 shadow-lg backdrop-blur-md overflow-hidden"
+      >
+        <!-- SVG Filter -->
+        <svg class="hidden">
+          <defs>
+            <filter id="wave-distort">
+              <feTurbulence
+                type="fractalNoise"
+                baseFrequency="0.0038 0.0038"
+                numOctaves="1"
+                seed="2"
+                result="noise"
+              />
+              <feGaussianBlur in="noise" stdDeviation="8.5" result="blur" />
+              <feDisplacementMap
+                in="SourceGraphic"
+                in2="blur"
+                scale="-42"
+                xChannelSelector="G"
+                yChannelSelector="G"
+              />
+            </filter>
+          </defs>
+        </svg>
+
+        <!-- Liquid layer -->
+        <div
+          class="absolute inset-0 backdrop-blur-md [filter:url(#wave-distort)]"
+        ></div>
+
+        <!-- Left: Menu -->
+        <ul
+          id="nav-list"
+          class="hidden md:flex relative items-center gap-6 h-[55px] px-4 text-sm font-semibold text-black dark:text-white"
+        >
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+
+          <!-- indicator -->
+          <span
+            id="indicator"
+            class="absolute bottom-2 w-3 h-3 rounded-full bg-white shadow-[0_4px_16px_rgba(255,255,255,0.4)] opacity-0"
+          ></span>
+        </ul>
+
+        <!-- Right side controls -->
+        <div
+          class="flex md:justify-end justify-between py-2 w-full items-center gap-3 relative z-10"
+        >
+          <!-- Theme Toggle -->
+          <label class="switch">
+            <input id="themeToggle" type="checkbox" class="checkbox" />
+            <div class="slider"></div>
+          </label>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="menuBtn"
+            class="md:hidden text-black dark:text-white text-xl"
+          >
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              height="30px"
+              width="30px"
+              xmlns="http://www.w3.org/2000/svg"
+              class="copy-svg-injected"
+            >
+              <path fill="none" d="M0 0h24v24H0V0z"></path>
+              <path
+                d="M3 18h13v-2H3v2zm0-5h10v-2H3v2zm0-7v2h13V6H3zm18 9.59L17.42 12 21 8.41 19.59 7l-5 5 5 5L21 15.59z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden mt-2 rounded-2xl border border-white/20 bg-white/70 dark:bg-black/60 backdrop-blur-md shadow-lg p-4"
+      >
+        <ul
+          class="flex flex-col gap-4 text-sm font-semibold text-black dark:text-white"
+        >
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </header>
     <!-- Hero Section -->
     <section class="hero" id="home">
       <div class="container">
@@ -347,7 +452,7 @@
         <p class="section-label reveal">/ 03 — Selected Work</p>
         <div id="ProjectsGrid" class="projects-grid reveal"></div>
         <div class="w-full flex justify-center items-center mt-10">
-          <a href="/Projects.html" >
+          <a href="/Projects.html">
             <button
               class="flex active:scale-105 justify-center group items-center gap-4 hover:scale-95 duration-300 transition-all hover:border-[#D3F45A] border py-2 px-4 text-[#D3F45A] hover:rounded-2xl"
             >
@@ -612,6 +717,78 @@
 
       // Append all project cards and then the end card
       ProjectsGrid.innerHTML = Projects.join("") + endCard;
+      document.addEventListener("DOMContentLoaded", () => {
+        const nav = document.getElementById("nav-list");
+        const items = document.querySelectorAll(".nav-link");
+        const indicator = document.getElementById("indicator");
+
+        let anim = null;
+        let activeItem = null;
+
+        const animate = (from, to) => {
+          if (anim) clearInterval(anim);
+
+          const start = Date.now();
+
+          anim = setInterval(() => {
+            const p = Math.min((Date.now() - start) / 500, 1);
+            const e = 1 - Math.pow(1 - p, 3);
+
+            const x = from + (to - from) * e;
+            const y = -40 * (4 * e * (1 - e));
+            const r = 200 * Math.sin(p * Math.PI);
+
+            indicator.style.transform = `translateX(${x}px) translateY(${y}px) rotate(${r}deg)`;
+            indicator.style.opacity = "1";
+
+            if (p >= 1) {
+              clearInterval(anim);
+              anim = null;
+              indicator.style.transform = `translateX(${to}px)`;
+            }
+          }, 16);
+        };
+
+        const getNavOffset = () => nav.getBoundingClientRect().left;
+
+        const getCenter = (el) => {
+          const rect = el.getBoundingClientRect();
+          return rect.left + rect.width / 2 - getNavOffset() - 6;
+        };
+
+        const move = (el) => {
+          const current = parseFloat(indicator.dataset.x || 0);
+          const target = getCenter(el);
+          indicator.dataset.x = target;
+          animate(current, target);
+        };
+
+        const setActive = (el) => {
+          activeItem?.classList.remove("text-black", "dark:text-white");
+          activeItem = el;
+          move(el);
+        };
+
+        items.forEach((item) => {
+          item.addEventListener("mouseenter", () => move(item));
+          item.addEventListener("click", () => setActive(item));
+        });
+
+        nav.addEventListener("mouseleave", () => {
+          if (activeItem) move(activeItem);
+          else indicator.style.opacity = "0";
+        });
+
+        // default active
+        if (items.length) setActive(items[0]);
+      });
+
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
     </script>
   </body>
 </html>
