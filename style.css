@@ -549,7 +549,8 @@ nav {
   color: var(--muted);
   display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: center;
+  gap: 10px;
 }
 
 .marquee-item span {
@@ -565,7 +566,7 @@ section {
 }
 
 .section-label {
-  font-size: 0.65rem;
+  font-size: 30px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--accent);
@@ -573,13 +574,14 @@ section {
   display: flex;
   align-items: center;
   gap: 16px;
+  letter-spacing: 0cqmin;
 }
 
 .section-label::before {
   content: "";
   display: block;
   width: 40px;
-  height: 1px;
+  height: 5px;
   background: var(--accent);
 }
 

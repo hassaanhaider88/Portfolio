@@ -19,6 +19,7 @@ const ProjectsData = [
       github: "https://github.com/hassaanhaider88/PunjabPizzaClub",
       live: "https://punjabpizzaclub.netlify.app",
     },
+    projectImg: "https://i.pinimg.com/originals/43/5c/86/435c86658431600d1acbae97d9e4898e.jpg"
   },
   {
     number: "002",
@@ -38,6 +39,7 @@ const ProjectsData = [
       github: "https://github.com/hassaanhaider88/Repo.ReadMe",
       live: "https://reporeademe.org",
     },
+    projectImg: "https://i.pinimg.com/originals/43/5c/86/435c86658431600d1acbae97d9e4898e.jpg"
   },
 
   {
@@ -59,6 +61,7 @@ const ProjectsData = [
       github: "https://github.com/hassaanhaider88/SEOWala_AI",
       live: "https://seowala-ai.onrender.com",
     },
+    projectImg: "https://i.pinimg.com/originals/43/5c/86/435c86658431600d1acbae97d9e4898e.jpg"
   },
   {
     number: "004",
@@ -77,6 +80,7 @@ const ProjectsData = [
       github: "https://github.com/hassaanhaider88/GetSrc-BE",
       live: "https://www.geturi.online",
     },
+    projectImg: "https://i.pinimg.com/originals/43/5c/86/435c86658431600d1acbae97d9e4898e.jpg"
   },
   {
     number: "005",
@@ -95,6 +99,7 @@ const ProjectsData = [
       github: "https://github.com/hassaanhaider88/ApexAI",
       live: "https://apexai-pk.netlify.app/",
     },
+    projectImg: "https://i.pinimg.com/originals/43/5c/86/435c86658431600d1acbae97d9e4898e.jpg"
   },
 
 
@@ -109,6 +114,7 @@ const ProjectsData = [
       github: "https://github.com/hassaanhaider88/ButtonJs",
       live: "https://buttonsjs.netlify.app/",
     },
+    projectImg: "https://i.pinimg.com/originals/43/5c/86/435c86658431600d1acbae97d9e4898e.jpg"
   },
   {
     number: "007",
@@ -121,6 +127,7 @@ const ProjectsData = [
       github: "https://github.com/hassaanhaider88/PersonaAEye",
       live: "https://pinsyourinterest.onrender.com",
     },
+    projectImg: "https://i.pinimg.com/originals/43/5c/86/435c86658431600d1acbae97d9e4898e.jpg"
   },
   {
     number: "008",
@@ -133,6 +140,7 @@ const ProjectsData = [
       github: "https://github.com/hassaanhaider88/GulzarSons",
       live: "http://gulzarsonsfurniture.com",
     },
+    projectImg: "https://i.pinimg.com/originals/43/5c/86/435c86658431600d1acbae97d9e4898e.jpg"
   },
   {
     number: "009",
@@ -151,6 +159,7 @@ const ProjectsData = [
       github: "https://github.com/hassaanhaider88/Web-Tracking",
       live: "https://devtrace-hmkcodeweb.netlify.app",
     },
+    projectImg: "https://i.pinimg.com/originals/43/5c/86/435c86658431600d1acbae97d9e4898e.jpg"
   },
   {
     number: "010",
@@ -163,6 +172,7 @@ const ProjectsData = [
       github: "",
       live: "https://hmk-shop-by-hassaan-haider.netlify.app/",
     },
+    projectImg: "https://i.pinimg.com/originals/43/5c/86/435c86658431600d1acbae97d9e4898e.jpg"
   },
   {
     number: "011",
@@ -175,6 +185,7 @@ const ProjectsData = [
       github: "https://github.com/hassaanhaider88/HMK_Blogs",
       live: "https://hmk-codeweb.netlify.app",
     },
+    projectImg: "https://i.pinimg.com/originals/43/5c/86/435c86658431600d1acbae97d9e4898e.jpg"
   },
   {
     number: "011",
@@ -193,6 +204,7 @@ const ProjectsData = [
       github: "https://github.com/hassaanhaider88/PersonaAEye",
       live: "https://personaaeye.netlify.app/",
     },
+    projectImg: "https://i.pinimg.com/originals/43/5c/86/435c86658431600d1acbae97d9e4898e.jpg"
   },
 ];
 
